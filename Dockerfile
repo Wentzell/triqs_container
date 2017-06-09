@@ -5,7 +5,7 @@ FROM ubuntu:17.04
 WORKDIR /root
 
 # Copy the current directory contents into the container at /app
-ADD . /root
+ADD pkglst /root
 
 # Install required packages as specified in pkglst
 RUN apt-get update
@@ -41,14 +41,19 @@ run make -j 8 && make install
 
 # Tutorial notebooks
 run mkdir /root/notebooks
+ADD /root/*.ipynb /root/notebooks
 run git clone https://github.com/TRIQS/tutorials.git /root/notebooks/tutorials
 WORKDIR /root/notebooks
+
+# Remove build directories and sources
+run rm -rf /root/*.build
+run rm -rf /root/*.src
 
 # ================
 
 # Make port 8888 available to the world outside this container
 EXPOSE 8888
 
-# Start the notebook when the container launches. Password: TRIQS4ALL
+# Start the notebook when the container launches.
 ENV PYTHONPATH /root/triqs/lib/python2.7/dist-packages:$PYTHONPATH
 CMD jupyter notebook --no-browser --port 8888 --ip=* --allow-root --NotebookApp.token='' --NotebookApp.password=''
