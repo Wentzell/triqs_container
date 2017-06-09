@@ -41,7 +41,7 @@ run make -j 8 && make install
 
 # Tutorial notebooks
 run mkdir /root/notebooks
-ADD /root/*.ipynb /root/notebooks
+ADD *.ipynb /root/notebooks/
 run git clone https://github.com/TRIQS/tutorials.git /root/notebooks/tutorials
 WORKDIR /root/notebooks
 
