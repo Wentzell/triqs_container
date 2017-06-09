@@ -50,6 +50,5 @@ WORKDIR /root/notebooks
 EXPOSE 8888
 
 # Start the notebook when the container launches. Password: TRIQS4ALL
-ENV HASH $(python -c "from IPython.lib import passwd; print passwd('TRIQS4ALL')")
 ENV PYTHONPATH /root/triqs/lib/python2.7/dist-packages:$PYTHONPATH
-CMD jupyter notebook --no-browser --port 8888 --ip=* --allow-root --NotebookApp.password="$HASH"
+CMD jupyter notebook --no-browser --port 8888 --ip=* --allow-root --NotebookApp.token='' --NotebookApp.password=''
