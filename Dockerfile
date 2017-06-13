@@ -13,9 +13,6 @@ RUN apt-get --assume-yes upgrade
 RUN apt-get --assume-yes install $(cat pkglst)
 RUN pip install jupyter
 
-# Set up Env variables
-ENV CXXFLAGS -march=native
-
 # === INSTALL Codes
 
 # TRIQS
