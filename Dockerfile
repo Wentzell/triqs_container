@@ -43,8 +43,8 @@ run git clone https://github.com/TRIQS/tutorials.git /root/notebooks/tutorials
 WORKDIR /root/notebooks
 
 # Remove build directories and sources
-run rm -rf /root/*.build
-run rm -rf /root/*.src
+# run rm -rf /root/*.build
+# run rm -rf /root/*.src
 
 # ================
 
