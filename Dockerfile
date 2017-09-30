@@ -11,7 +11,6 @@ ADD pkglst /root
 RUN apt-get update
 RUN apt-get --assume-yes upgrade
 RUN apt-get --assume-yes install $(cat pkglst)
-RUN pip install jupyter
 
 # === INSTALL Codes
 
