@@ -1,5 +1,1 @@
-cmake git g++ gfortran vim tmux zsh clang clang-format libclang-dev 
-libgfortran3 libnfft3-dev libboost-all-dev hdf5-tools libhdf5-serial-dev libjs-mathjax 
-openmpi-bin openmpi-common openmpi-doc libopenmpi-dev libblas-dev liblapack-dev libfftw3-dev libgmp-dev 
-python-dev python-numpy python-scipy python-jinja2 python-virtualenv python-matplotlib python-notebook
-python-tornado python-zmq python-h5py python-mpi4py python-mako python-clang-3.8 python-sphinx python-pip
+cmake wget git vim tmux zsh llvm llvm-clang gcc gcc5-c++ gcc5-fortran gmp-devel boost-devel hdf5-devel openmpi-devel blas-devel lapack-devel fftw3-devel python-devel python-numpy-devel python-scipy python-h5py python-tornado python-Mako python-xml python-h5py python-mpi4py python-clang IPython tar
